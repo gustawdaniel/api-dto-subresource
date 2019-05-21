@@ -22,6 +22,7 @@ final class BookOutputDataTransformer implements DataTransformerInterface
         if($data instanceof Book) {
             $output = new BookOutput();
             $output->name = $data->name;
+            $output->object = $data->object;
             return $output;
         }
     }

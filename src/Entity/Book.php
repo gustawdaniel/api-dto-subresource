@@ -7,6 +7,7 @@ use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Dto\BookInput;
 use App\Dto\BookOutput;
+use App\Model\Attribute;
 
 /**
  * @ApiResource(
@@ -22,6 +23,16 @@ final class Book
      */
     public $name;
     public $isbn;
+
+    /**
+     * @var Attribute
+     */
+    public $object;
+
+    public function __construct()
+    {
+        $this->object = new Attribute();
+    }
 }
 
 // command to test
